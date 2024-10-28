@@ -35,6 +35,82 @@
           xhttp.send();
         }
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let previousMinute = new Date().getMinutes();
+
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            if (!timeElement) return; // Asegurarse de que el elemento existe
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const formattedHours = hours % 12 || 12; // Convertir 0 a 12
+            const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+            const currentTime = `${formattedHours}:${formattedMinutes} ${ampm}`;
+
+            // Actualizar el contenido del elemento
+            timeElement.textContent = currentTime;
+
+            // Ejecutar la animación solo si el minuto ha cambiado
+            if (minutes !== previousMinute) {
+                // Añadir la clase de animación
+                timeElement.classList.add('time-update');
+
+                // Quitar la clase de animación después de que termine
+                setTimeout(() => {
+                    timeElement.classList.remove('time-update');
+                }, 500); // La duración de la animación es de 0.5s
+
+                // Actualizar el minuto anterior
+                previousMinute = minutes;
+            }
+        }
+
+        // Actualizar la hora cada segundo
+        setInterval(updateTime, 1000);
+
+        // Llamar a la función una vez para establecer la hora inicial
+        updateTime();
+
+        // Función para obtener la temperatura en tiempo real
+        async function fetchTemperature() {
+            const apiKey = '049af8fdfc7c28200c7b5f38ca6c6b9a'; // Reemplaza con tu API key de OpenWeatherMap
+            const city = 'Querétaro';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const temperature = Math.round(data.main.temp)
+                const humedad = data.main.humidity;
+                const viento = data.wind.speed;
+                const temperatureElement = document.getElementById('temperature');
+                if (temperatureElement) {
+                    temperatureElement.innerHTML = `${temperature}<span class="text-muted">&deg;C</span>`;
+                }
+                const humidityElement = document.getElementById('txt_humedad');
+                if (humidityElement) {
+                    humidityElement.innerHTML = `<p class="bx bx-droplet"></p>${humedad}<span> %</span>`;
+                }
+                const VientoElement = document.getElementById('txt_viento');
+                if (VientoElement) {
+                    VientoElement.innerHTML = `<p class="bx bx-flag"></p>${viento}<span> m/s</span>`;
+                }
+            } catch (error) {
+                console.error('Error fetching temperature:', error);
+            }
+        }
+
+        // Llamar a la función para obtener la temperatura al cargar la página
+        fetchTemperature();
+
+        // Actualizar la temperatura cada 10 minutos
+        setInterval(fetchTemperature, 600000); // 600000 ms = 10 minutos
+    });
+</script>
 </head>
 
 <body class="newsfeed">
@@ -788,31 +864,34 @@
                         </div>
                     </div>
                     <div class="col-md-3 third-section">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <div class="weather-card-header d-flex justify-content-between align-items-center">
-                                    <p class="fs-1 mb-0">11:37 PM</p>
-                                    <a href="#" class="btn text-primary">California, CA <i class='bx bx-chevron-down'></i></a>
-                                </div>
-                                <div class="weather-quick align-items-center mt-4">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <img src="assets/images/icons/weather/sun.png" width="40" height="40" alt="Weather icon">
-                                            <h1 class="weather-card display-4 ml-3">28<span class="text-muted">&deg;</span></h1>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <p class="mb-0 fs-1" ><i class='bx bx-droplet'></i> 15%</p>
-                                            <p class="mb-0 fs-1" ><i class='bx bx-flag'></i> 10km/h</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="tiempo"></div>
+                        <script>
+                            loadHTML(document.getElementById('tiempo'), 'tiempo_hora.html');
+                        </script>
+    
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <style>
+        .time-update {
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    
 
     <!-- Modals -->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="postModal" aria-labelledby="postModal" aria-hidden="true">
