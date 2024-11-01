@@ -16,6 +16,69 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+.module {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    height: 150px;
+}
+
+
+/* Otros estilos existentes */
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    height: 30vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (min-width: 1200px) {
+    .carousel-inner {
+        height: 20vh; /* Ajusta la altura para pantallas grandes */
+        min-height: 360px;
+    }
+}
+
+
+@media (max-width: 999px) {
+    .carousel-inner {
+        height: 20vh; /* Ajusta la altura para pantallas grandes */
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carousel-inner {
+        height: 5vh; /* Ajusta la altura para pantallas alrededor de 780px */
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-inner {
+        height: 10vh; /* Ajusta la altura para pantallas grandes */
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 800px) {
+    .carousel-inner {
+        height: 10vh; /* Ajusta la altura para pantallas grandes */
+        min-height: 170px;
+    }
+}
+
 body {
     height: 100%;
     margin: 0;
