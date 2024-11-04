@@ -10,6 +10,174 @@
     box-sizing: border-box;
 }
 
+/* Realización de modo oscuro */
+/* Variables de color */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #|1000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+}
+
+html.dark-mode, body.dark-mode {
+    --bg-color: #111418;
+    --text-color: #ffffff;
+    --navbar-bg: #343a40;
+    --navbar-text: #ffffff;
+}
+
+#backgroundDiv {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s;
+}
+
+/* Modo claro */
+#complemento {
+    background-color: #f8f9fa; /* Color claro */
+    transition: background-color 0.3s;
+}
+
+/* Modo oscuro */
+html.dark-mode #complemento {
+    background-color: #0e1216; /* Color oscuro */
+}
+
+
+#weather-card {
+    background-color: #ffffff; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #weather-card {
+    background-color: #343a40; /* Color oscuro deseado */
+}
+
+#menu {
+    background-color: #ffffff; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #menu {
+    background-color: #343a40; /* Color oscuro deseado */
+}
+
+#mennu {
+    background-color: #ffffff; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #mennu {
+    background-color: #343a40; /* Color oscuro deseado */
+}
+
+#pub {
+    background-color: #ffffff; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #pub {
+    background-color: #343a40; /* Color oscuro deseado */
+    color:#ffffff;
+}
+
+#Pt1 {
+    color: #4d4a4a; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #Pt1 {
+    color: #ffffff; /* Color oscuro deseado */
+}
+
+.w-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+
+.w-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#CamText {
+    color: #000000; /* Color claro deseado */
+    transition: background-color 0.3s;
+    
+}
+/* Hover en modo claro */
+#CamText:hover {
+    color: #555555; /* Color de texto al pasar el cursor */
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #CamText {
+    color: #ffffff; /* Color oscuro deseado */
+}
+
+/* Hover en modo oscuro */
+html.dark-mode #CamText:hover {
+    color: #cccccc; /* Color de texto al pasar el cursor en modo oscuro */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+    
+}
+
+*{
+    cursor: url("cursor.png"), auto !important;
+}
+
+/* Modo Claro */
+#navbar-main {
+    background-color: #343a40; /* Color claro */
+    transition: background-color 0.3s;
+}
+
+/* Modo Oscuro */
+html.dark-mode #navbar-main {
+    background-color: #343a40; /* Color oscuro */
+}
+
+/* Modo Claro */
+#show-comments {
+    color: #343a40; /* Color claro */
+    transition: background-color 0.3s;
+}
+
+/* Modo Oscuro */
+html.dark-mode #show-comments {
+    color: #ffffff; /* Color oscuro */
+}
+
+/* Modo Claro */
+#reactions {
+    color: #343a40; /* Color claro */
+    transition: background-color 0.3s;
+}
+
+/* Modo Oscuro */
+html.dark-mode #reactions {
+    color: #ffffff; /* Color oscuro */
+}
+
+.btn-outline-secondary {
+    cursor: pointer;
+}
+
+
 html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
@@ -46,7 +214,7 @@ html {
 @media (min-width: 1200px) {
     .carousel-inner {
         height: 20vh; /* Ajusta la altura para pantallas grandes */
-        min-height: 360px;
+        min-height: 330px;
     }
 }
 
@@ -77,13 +245,6 @@ html {
         height: 10vh; /* Ajusta la altura para pantallas grandes */
         min-height: 170px;
     }
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 .js body {
@@ -553,19 +714,25 @@ body::-webkit-scrollbar-thumb:hover {
     color: #fff;
 }
 
-/* Menu */
-.navbar {
-    background-color: #fff !important;
-}
 
 #navbar-main {
     padding: 0px 1rem;
+    background-color: #fff; /* Color claro */
+    transition: background-color 0.3s;
+}
+
+html.dark-mode #navbar-main .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
 }
 
 #navbar-main .navbar-brand {
     display: flex;
     align-items: center;
+    color: #000;
 }
+
 
 #navbar-main .nav-icon {
     font-size: 1.6rem;

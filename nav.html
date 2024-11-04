@@ -1,6 +1,6 @@
 <nav id="navbar-main" class="navbar navbar-expand-lg shadow-sm sticky-top">
 
-    <div class="w-100 justify-content-between">
+    <div class="w-100 justify-content-between" id="nave">
         <!-- Navbar de escritorio -->
         <ul class="navbar-nav mr-5 d-flex align-items-center" id="main_menu">
             <a class="navbar-brand nav-item mr-lg-5" href="index.html"><img src="assets/images/icons/navbar/itsjr.jpeg" width="40" height="40" class="mr-3" alt="Logo"></a>
@@ -284,17 +284,14 @@
 
             <!-- Ajustes -->
             <li class="nav-item nav-icon dropdown">
-                <a href="settings.html" data-toggle="dropdown" data-placement="bottom" data-title="Settings" class="nav-link settings-link drop-w-tooltip" id="settings-dropdown">
+                <a href="settings.html" data-toggle="dropdown" data-placement="bottom" data-title="settings" class="nav-link settings-link drop-w-tooltip" id="settings-dropdown">
                     <img src="assets/images/icons/navbar/settings.png" class="nav-settings ml-1" alt="navbar icon">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right settings-dropdown shadow-sm " aria-labelledby="settings-dropdown">
                     <a class="dropdown-item" href="#">
                         <img src="assets/images/icons/navbar/help.png" alt="Navbar icon"> Centro de ayuda</a>
-                    <a class="dropdown-item d-flex align-items-center dark-mode" onClick="event.stopPropagation();" href="#">
-                        <img src="assets/images/icons/navbar/moon.png" alt="Navbar icon"> Modo oscuro
-                        <button type="button" class="btn btn-lg btn-toggle ml-auto" data-toggle="button" aria-pressed="false" autocomplete="off">
-                            <div class="handle"></div>
-                        </button>
+                    <a class="dropdown-item d-flex align-items-center" id="darkModeToggle">
+                        <i class="bi bi-moon-fill"></i> Modo Oscuro
                     </a>
                     <a class="dropdown-item" href="#">
                         <img src="assets/images/icons/navbar/gear-1.png" alt="Navbar icon"> Configuraciones </a>
