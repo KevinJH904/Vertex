@@ -37,6 +37,42 @@
           xhttp.send();
         }
     </script>
+<script>
+    function nuevaPublicacion() {
+        var Titulo = "Nuevo Título"; // Cambia esto por el valor dinámico
+        var cuerpo = "Nuevo cuerpo del texto"; // Cambia esto por el valor dinámico
+
+        var nuevaPublicacionHTML = `
+        <div class="col-13 mb-4">
+            <div class="card h-100" id="weather-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-1 d-flex align-items-center justify-content-center p-2">
+                        <img src="assets/images/background/auth-bg-2.jpg" 
+                             class="rounded-circle" 
+                             alt="Imagen circular" 
+                             style="width: 60px; height: 60px; object-fit: cover;">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body p-0">
+                            <h5 class="card-title m-2">${Titulo}</h5>
+                            <p class="card-text m-2">${cuerpo}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="text-muted ms-2 m-0">19 de octubre de 2024</p>
+                    </div>
+                    <div class="col-md-2 d-none d-md-block h-100">
+                        <img src="assets/images/background/auth-bg-2.jpg" class="img-fluid rounded-end h-100" alt="Imagen 1" style="object-fit: cover;">
+                    </div>
+                </div>
+                <button onclick="nuevaPublicacion()">Nueva publicacion</button>
+            </div>
+        </div>`;
+
+        var pubContainer = document.getElementById('pub');
+        pubContainer.insertAdjacentHTML('beforebegin', nuevaPublicacionHTML);
+    }
+</script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -116,6 +152,8 @@
 </head>
 
 <body class="newsfeed">
+
+    
     <div class="container-fluid" id="wrapper">
         <div class="row newsfeed-size">
             <div class="col-md-12 newsfeed-right-side" id="complemento">
@@ -140,6 +178,7 @@
                             
                             <!-- Módulo 2 -->
                             <div class="col-12 col-sm-7 col-lg-8">
+                                
                                 <div id="central"></div>
                                 <script>
                                     loadHTML(document.getElementById('central'), 'central.html');
@@ -158,6 +197,12 @@
                 </div>
             </div>
         </div>
+
+        <!-- Botón flotante -->
+        <a href="publicacion2.html">
+        <button class="btn-floating" aria-label="Agregar">
+            <i class="masboton">+</i>
+        </button></a>
     </div>
 
     <style>
@@ -365,6 +410,8 @@
         </div>
     </div>
     <!-- END call modal -->
+
+    
 
     <!-- Core -->
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>

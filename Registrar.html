@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/images/logo-16x16.png" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Argon - Social Network</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.9.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Styles -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/components.css" rel="stylesheet">
+    <link href="assets/css/auth.css" rel="stylesheet">
+    <link href="assets/css/media.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row ht-100v flex-row-reverse no-gutters">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="signup-form">
+                <div class="auth-logo text-center mb-5">
+                    <div class="row">
+                        <!--
+                        <div class="col-md-2">
+                            <img src="assets/images/logo-64x64.png" class="logo-img" alt="Logo">
+                        </div>
+
+                        -->
+                        <div class="col-md-10">
+                            <p>Registrate</p>
+                            <span>ConnecTec</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="" id="registroForm" method="" class="pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="apellidos" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="email" placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="telefono" placeholder="Número de teléfono">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="day" class="form-control">
+                                    <option value="">Día</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="month" class="form-control">
+                                    <option value="">Mes</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="yearSelect" class="form-control">
+                                    <option value="">Año</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <!-- ... continuar hasta 1960 -->
+                                    <option value="1960">1960</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Script para generar los años dinámicamente -->
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const yearSelect = document.getElementById('yearSelect');
+                            const startYear = 2024;
+                            const endYear = 1960;
+                            
+                            yearSelect.innerHTML = '<option value="">Año</option>';
+                            
+                            for(let year = startYear; year >= endYear; year--) {
+                                yearSelect.innerHTML += `<option value="${year}">${year}</option>`;
+                            }
+                        });
+                        </script>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="confirm-password" placeholder="Confirmar contraseña">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="agree-privacy">Al crear una cuenta aceptas los términos y políticas de uso.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="go-login">¿Ya tienes cuenta?<a href="inicio_sesion.html"> Inicia sesión</a></span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary sign-up">Registrarse</button>
+                            </div>
+                        </div>
+                        
+
+                        <!--Script de validación de campos-->
+                        <script>
+
+                            // Evento click del botón
+                        document.querySelector('.sign-up').addEventListener('click', function() {
+                            // Obtener valores de los campos
+                            const nombre = document.getElementById('nombre').value;
+                            const apellidos = document.getElementById('apellidos').value;
+                            const email = document.getElementById('email').value;
+                            const telefono = document.getElementById('telefono').value;
+                            const password = document.getElementById('password').value;
+                            const confirmPassword = document.getElementById('confirm-password').value;
+
+                        // Funciones de validación
+                        function validarNombre(nombre) {
+                            const regex = /^[A-Za-zÁáÉéÍíÓóÚúÑñ]{1,8}$/;
+                            return regex.test(nombre);
+                        }
+
+                        function validarEmail(email) {
+                            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            return regex.test(email);
+                        }
+
+                        function validarTelefono(telefono) {
+                            const regex = /^\d{10}$/;
+                            return regex.test(telefono);
+                        }
+
+                        function validarContrasenas(pass1, pass2) {
+                            return pass1 === pass2 && pass1.length > 0;
+                        }
+
+                        
+
+                            // Validar cada campo
+                            let isValid = true;
+                            let mensaje = '';
+
+                            if (!validarNombre(nombre)) {
+                                mensaje += 'El nombre debe contener solo letras y máximo 8 caracteres\n';
+                                isValid = false;
+                            }
+
+                            if (!validarNombre(apellidos)) {
+                                mensaje += 'Los apellidos deben contener solo letras y máximo 8 caracteres\n';
+                                isValid = false;
+                            }
+
+                            if (!validarEmail(email)) {
+                                mensaje += 'El correo electrónico no es válido\n';
+                                isValid = false;
+                            }
+
+                            if (!validarTelefono(telefono)) {
+                                mensaje += 'El teléfono debe contener exactamente 10 dígitos\n';
+                                isValid = false;
+                            }
+
+                            if (!validarContrasenas(password, confirmPassword)) {
+                                mensaje += 'Las contraseñas no coinciden o están vacías\n';
+                                isValid = false;
+                            }
+
+                            if (!isValid) {
+                                alert(mensaje);
+                                return;
+                            }
+
+                            // Si todo es válido, aquí puedes enviar el formulario
+                            alert('Formulario válido! Procediendo con el registro...');
+                            // document.getElementById('formulario-registro').submit();
+                        });
+                        </script>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 auth-bg-image d-flex justify-content-center align-items-center">
+            <div class="auth-left-content mt-5 mb-5 text-center">
+                <div class="weather-small text-white">
+                    <p class="current-weather"><i class='bx bx-sun'></i> <span>14&deg;</span></p>
+                    <p class="weather-city">San Juan del Río, Qro</p>
+                </div>
+                <div class="text-white mt-5 mb-5">
+                    <h2 class="create-account mb-3">Crea una cuenta</h2>
+                    <p>Ingresa tus datos personales y comienza a compartir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core -->
+    <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper/popper.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Optional -->
+    <script src="assets/js/app.js"></script>
+</body></html>

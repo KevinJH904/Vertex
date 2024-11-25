@@ -136,6 +136,36 @@ body {
     
 }
 
+/* Estilo del botón flotante */
+.btn-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #c5b8b8; /* Color de fondo */
+    color: #007bff; /* Color del ícono */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  .masboton{
+    color: #007bff;
+  }
+
+  .btn-floating:hover {
+    background-color: #28344e; /* Color de fondo al pasar el mouse */
+  }
+
+  .btn-floating i {
+    font-size: 24px; /* Tamaño del ícono */
+  }
+
+
 *{
     cursor: url("cursor3.png") 16 16, auto !important;
 }

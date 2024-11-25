@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botón flotante</title>
+  <!-- Enlace a Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilo del botón flotante */
+    .btn-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #e5e5e5; /* Color de fondo */
+      color: #007bff; /* Color del ícono */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+    }
+
+    .btn-floating:hover {
+      background-color: #d6d6d6; /* Color de fondo al pasar el mouse */
+    }
+
+    .btn-floating i {
+      font-size: 24px; /* Tamaño del ícono */
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón flotante -->
+  <button class="btn-floating" aria-label="Agregar">
+    <i class="bi bi-plus"></i>
+  </button>
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Enlace a Bootstrap JS (opcional, para funcionalidad adicional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
