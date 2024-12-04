@@ -19,6 +19,8 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/components.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
@@ -145,18 +147,22 @@
                     <div class="container mt-5">
                         <div class="row">
                             <!-- Módulo 1 -->
-                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu" style="position: sticky; top: 0;">
+                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu" style="position: fixed; top: 20; left: 0; z-index: 9999; height: 100vh;">
                                 <!--Importación del modulo de la izquierda-->
                                 <script>
                                     loadHTML(document.getElementById('menu'), 'menu_izq.html');
                                 </script>
                             </div>
+
+                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu">
+                                
+                            </div>
                             
                             <!-- Módulo 2 -->
                             <div class="col-12 col-sm-7 col-lg-8">
                                 <div class="container">
-                                    <div class="card shadow">
-                                        <div class="card-body">
+                                    <div class="card shadow" id="Publicacion_S">
+                                        <div class="card-body" id="Publicacion">
                                             <h4 class="card-title text-center mb-4">Crear nueva publicación</h4>
                                             <form id="publicacionForm">
                                                 <!-- Título -->

@@ -51,6 +51,13 @@ html.dark-mode #complemento {
 /* Estilo en modo oscuro */
 html.dark-mode #weather-card {
     background-color: #343a40; /* Color oscuro deseado */
+    color: #ffffff;
+}
+
+
+
+.text-muted {
+    color: #0a3f6e; /* Color claro deseado */
 }
 
 #menu {
@@ -73,6 +80,43 @@ html.dark-mode #mennu {
     background-color: #343a40; /* Color oscuro deseado */
 }
 
+#Cuerpo_Menu {
+    background-color: #ffffff; /* Color claro deseado */
+    color: #000000;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #Cuerpo_Menu {
+    background-color: #606264; /* Color oscuro deseado */
+}
+
+#TopMenu {
+    background-color: #3878c0; /* Color claro deseado */
+    color: #ffffff;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #TopMenu {
+    background-color: #2a2b2c; /* Color oscuro deseado */
+}
+
+#Publicacion {
+    background-color: #ffffff; /* Color claro deseado */
+    color: #000000;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #Publicacion {
+    background-color: #111418; /* Color oscuro deseado */
+    color: #ffffff;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #Publicacion_S{
+    background-color: #9797a1; /* Color oscuro deseado */
+}
+
+
 #pub {
     background-color: #ffffff; /* Color claro deseado */
     transition: background-color 0.3s;
@@ -80,6 +124,17 @@ html.dark-mode #mennu {
 
 /* Estilo en modo oscuro */
 html.dark-mode #pub {
+    background-color: #343a40; /* Color oscuro deseado */
+    color:#ffffff;
+}
+
+#formulario {
+    background-color: #ffffff; /* Color claro deseado */
+    transition: background-color 0.3s;
+}
+
+/* Estilo en modo oscuro */
+html.dark-mode #formulario {
     background-color: #343a40; /* Color oscuro deseado */
     color:#ffffff;
 }
@@ -111,7 +166,7 @@ html.dark-mode #Pt1 {
 }
 /* Hover en modo claro */
 #CamText:hover {
-    color: #555555; /* Color de texto al pasar el cursor */
+    color: #4c8fe7; /* Color de texto al pasar el cursor */
 }
 
 /* Estilo en modo oscuro */
@@ -121,7 +176,7 @@ html.dark-mode #CamText {
 
 /* Hover en modo oscuro */
 html.dark-mode #CamText:hover {
-    color: #cccccc; /* Color de texto al pasar el cursor en modo oscuro */
+    color: #edee99; /* Color de texto al pasar el cursor en modo oscuro */
 }
 
 body {
@@ -506,8 +561,13 @@ button:focus {
 }
 
 .newsfeed-right-side-content {
-    width: 95%;
+    width: auto;
     margin: 0 auto
+}
+
+#menu {
+    max-height: 30px; /* O establece una altura máxima fija */
+    max-height: 5px;
 }
 
 .newsLink {
@@ -812,6 +872,47 @@ html.dark-mode #navbar-main .navbar-brand {
     width: 100%;
     border-radius: 50%;
 }
+
+
+.custom-offcanvas {
+    --bs-offcanvas-width: 100px; /* Ajusta este valor según necesites */
+}
+
+.offcanvas.offcanvas-start {
+    --bs-offcanvas-width: 100px; /* Ajusta este valor según necesites */
+}
+
+
+/* Asegurar que el Offcanvas esté por encima de todo */
+.offcanvas {
+    z-index: 9999 !important; /* Valor alto para asegurar que esté por encima */
+}
+
+.offcanvas-backdrop {
+    z-index: 9998 !important; /* Un valor menor que el offcanvas pero mayor que otros elementos */
+}
+
+/* Ajustar el z-index del carrusel y otros elementos que puedan interferir */
+.carousel {
+    z-index: 1;
+    position: relative;
+}
+
+.navbar {
+    z-index: 1000;
+}
+
+/* Asegurar que el botón del menú siempre esté visible */
+#menu-toggle {
+    z-index: 9999;
+    position: relative;
+    background-color: #ffffff;
+}
+
+html.dark-mode #menu-toggle {
+    background-color: #343a40;
+}
+
 
 /* Post modal */
 .media-body .bx-globe {

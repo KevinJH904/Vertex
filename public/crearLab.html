@@ -25,6 +25,8 @@
     <link href="assets/css/chat.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="assets/js/load.js" type="text/javascript"></script>
 
     <script>
@@ -144,17 +146,20 @@
                 <div class="row newsfeed-right-side-content mt-3" id="backgroundDiv">
                     <div class="container mt-5">
                         <div class="row">
-                            <!-- Módulo 1 -->
-                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu" style="position: sticky; top: 0;">
+                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu" style="position: fixed; top: 20; left: 0; z-index: 9999; height: 100vh;">
                                 <!--Importación del modulo de la izquierda-->
                                 <script>
                                     loadHTML(document.getElementById('menu'), 'menu_izq.html');
                                 </script>
                             </div>
+
+                            <div class="col-2 col-sm-1 col-lg-1 newsfeed-left-side shadow-lg" id="menu">
+                                
+                            </div>
                             
                             <!-- Módulo 2 -->
                             <div class="col-12 col-sm-7 col-lg-8">
-                                <div class="container">
+                                <div class="container" id="formulario">
                                     <div class="form-container">
                                         <h3 class="text-center mb-4">Crear nueva oferta laboral</h3>
                                         <form id="crearOfertaForm">
@@ -163,18 +168,21 @@
                                                 <label for="titulo" class="form-label">Título</label>
                                                 <input type="text" class="form-control" id="titulo" placeholder="Escribe el título aquí">
                                             </div>
+                                            <br>
                                         
                                             <!-- Descripción del puesto -->
                                             <div class="mb-3">
                                                 <label for="descripcion" class="form-label">Descripción del puesto</label>
                                                 <textarea class="form-control" id="descripcion" rows="4" placeholder="Escribe la descripción aquí"></textarea>
                                             </div>
+                                            <br>
                                         
                                             <!-- Imagen relacionada -->
                                             <div class="mb-3">
                                                 <label for="imagen" class="form-label">Imagen relacionada (Opcional)</label>
                                                 <input type="file" class="form-control" id="imagen">
                                             </div>
+                                            <br>    
                                         
                                             <!-- Contacto -->
                                             <div class="mb-3">
@@ -186,6 +194,7 @@
                                                 <button type="submit" class="btn btn-primary">Publicar</button>
                                                 <button type="reset" class="btn btn-danger">Descartar</button>
                                             </div>
+                                            
                                         </form>
                                         
                                         <script>

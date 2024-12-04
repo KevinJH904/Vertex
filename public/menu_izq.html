@@ -1,33 +1,46 @@
 <!--Menu lateral izquierdo-->
-<div class="card newsfeed-user-card h-100"  id="mennu">
-    <ul class="list-group list-group-flush newsfeed-left-sidebar"  id="mennu">
-        <li class="list-group-item d-flex justify-content-center align-items-center"  id="mennu">
-            <a href="#" class="sidebar-item d-flex justify-content-center"><img src="assets/images/icons/left-sidebar/menu.png" alt="newsfeed"></a>
-            <!--<a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>-->
-        </li>
-        <li class="list-group-item d-flex flex-column align-items-center text-center"  id="mennu">
-            <a href="index.html" class="sidebar-item d-flex flex-column align-items-center text-center">
-                <img src="assets/images/icons/left-sidebar/home.png" alt="home" class="mb-2 d-block mx-auto">
-                <div id="CamText">Inicio</div>
-            </a>
-        </li>
-        <li class="list-group-item d-flex flex-column align-items-center text-center"  id="mennu">
-            <a href="oferta_academica.html" class="sidebar-item d-flex flex-column align-items-center text-center">
-                <img src="assets/images/icons/left-sidebar/oferta_a.png" alt="" class="mb-2 d-block mx-auto">
-                <div id="CamText">Oferta Académica</div>
-            </a>
-        </li>
-        <li class="list-group-item d-flex flex-column align-items-center text-center"  id="mennu">
-            <a href="oferta_laboral.html" class="sidebar-item d-flex flex-column align-items-center text-center">
-                <img src="assets/images/icons/left-sidebar/oferta_L.png" alt="event" class="mb-2 d-block mx-auto">
-                <div id="CamText">Oferta Laboral</div>
-            </a>
-        </li>
-        <li class="list-group-item d-flex flex-column align-items-center text-center"  id="mennu">
-            <a href="repositorio.html" class="sidebar-item d-flex flex-column align-items-center text-center">
-                <img src="assets/images/icons/left-sidebar/repositorio.png" alt="event" class="mb-2 d-block mx-auto">
-                <div id="CamText">Repositorio</div>
+<div class="card newsfeed-user-card h-100" id="mennu" >
+    <ul class="list-group list-group-flush newsfeed-left-sidebar" id="mennu">
+        <li class="list-group-item d-flex justify-content-center align-items-center menu-toggle" id="menu-toggle">
+            <a href="#" class="sidebar-item d-flex justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                <img src="assets/images/icons/left-sidebar/menu.png" alt="newsfeed">
             </a>
         </li>
     </ul>
+</div>
+
+<!-- Offcanvas Menu -->
+<div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">    
+    <div class="offcanvas-header" id="TopMenu">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="Cuerpo_Menu" >
+        <ul class="list-group list-group-flush newsfeed-left-sidebar h-auto my-2" >            
+            <li class="list-group-item d-flex flex-column align-items-center text-center" id="Cuerpo_Menu">
+                <a href="index.html" class="sidebar-item d-flex flex-column align-items-center text-center">
+                    <img src="assets/images/icons/left-sidebar/home.png" alt="home" class="mb-2 d-block mx-auto">
+                    <div id="CamText">Inicio</div>
+                </a>
+            </li>
+            <li class="list-group-item d-flex flex-column align-items-center text-center"  id="Cuerpo_Menu">
+                <a href="oferta_academica.html" class="sidebar-item d-flex flex-column align-items-center text-center">
+                    <img src="assets/images/icons/left-sidebar/oferta_a.png" alt="" class="mb-2 d-block mx-auto">
+                    <div id="CamText">Oferta Académica</div>
+                </a>
+            </li>
+            <li class="list-group-item d-flex flex-column align-items-center text-center"  id="Cuerpo_Menu">
+                <a href="oferta_laboral.html" class="sidebar-item d-flex flex-column align-items-center text-center">
+                    <img src="assets/images/icons/left-sidebar/oferta_L.png" alt="event" class="mb-2 d-block mx-auto">
+                    <div id="CamText">Oferta Laboral</div>
+                </a>
+            </li>
+            <li class="list-group-item d-flex flex-column align-items-center text-center"  id="Cuerpo_Menu">
+                <a href="repositorio.html" class="sidebar-item d-flex flex-column align-items-center text-center">
+                    <img src="assets/images/icons/left-sidebar/repositorio.png" alt="event" class="mb-2 d-block mx-auto">
+                    <div id="CamText">Repositorio</div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
